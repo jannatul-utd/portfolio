@@ -10,6 +10,17 @@ const Education = () => {
         <div className="education-item">
           <div className="education-header">
             <h3>
+              <a href="https://cs.utdallas.edu" target="_blank" rel="noopener noreferrer">
+                University of Texas at Dallas
+              </a>
+            </h3>
+            <p className="duration">Jan. 2026 -- Present</p>
+          </div>
+          <p>Doctor of Philosophy in Computer Science</p>
+        </div>
+        <div className="education-item">
+          <div className="education-header">
+            <h3>
               <a href="https://www.juniv.edu" target="_blank" rel="noopener noreferrer">
                 Jahangirnagar University
               </a>
