@@ -4,58 +4,109 @@ import '../styles/Home.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedin, faGithub, faGoogle, faOrcid } from '@fortawesome/free-brands-svg-icons';
 import profileImage from '../assets/images/my image.jpg';
+import resumePDF from '../assets/files/Resume.pdf';
+
 
 const Home = () => {
     return (
         <div className="home">
             <div className="content-container">
+
+                {/* Left Section */}
                 <div className="left-section">
                     <img
                         src={profileImage}
-                        alt="Jannatul's photo"
+                        alt="Jannatul Ferdoush Jannati"
                         className="profile-photo"
                     />
+
                     <div className="social-links">
-                        <a href="https://www.linkedin.com/in/jannat349/" className="social-icon" target="_blank" rel="noopener noreferrer">
+                        <a href="https://www.linkedin.com/in/jannat349/" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
-                        <a href="https://github.com/jannat-349" className="social-icon" target="_blank" rel="noopener noreferrer">
+                        <a href="https://github.com/jannat-349" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
-                        <a href="https://scholar.google.com/citations?user=G_z0QKQAAAAJ&hl=en" className="social-icon" target="_blank" rel="noopener noreferrer">
+                        <a href="https://scholar.google.com/citations?user=G_z0QKQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faGoogle} />
                         </a>
-                        <a href="https://orcid.org/0009-0002-0053-884X" className="social-icon" target="_blank" rel="noopener noreferrer">
+                        <a href="https://orcid.org/0009-0002-0053-884X" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faOrcid} />
                         </a>
                     </div>
+
                     <div className="email-section">
-                        <p><strong>Email: </strong>jannatul.stu2018@juniv.edu</p>
+                        <p><strong>Work:</strong> jannatul.jannati@utdallas.edu</p>
+                        <p><strong>Personal:</strong> jannatul.6249@gmail.com</p>
+                        <a
+                            href={resumePDF}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="resume-link"
+                        >
+                            My Resume
+                        </a>
+
                     </div>
                 </div>
 
-                {/* Right Section: Bio */}
+                {/* Right Section */}
                 <div className="right-section">
-                    <h1 className="bio">
-                        Currently, I am employed as an SQA Engineer at <a href="https://www.dsinnovators.com" target="_blank" rel="noopener noreferrer">Dynamic Solution Innovators Ltd.</a>, where I contribute to enhancing software quality and ensuring the delivery of efficient and reliable systems. 
-                        Our team named DPE has their main focus to build <a href="https://ipemis.dpe.gov.bd/" target="_blank" rel="noopener noreferrer">IPEMIS System</a> for ensuring a digital primary education system in Bangladesh.
-                        <br></br>
-                        <br></br>
-                        I hold a undergraduate degree majoring in Computer Science and Engineering from <a href="https://juniv.edu/" target="_blank" rel="noopener noreferrer">Jahangirnagar University</a>. 
-                        My academic background has provided me with a solid foundation in areas such as data analysis, problem-solving, and innovative research approaches.
-                        <br></br>
-                        <br></br>
-                        My undergraduate research involved solving modal equations using particle swarm optimization (PSO) and genetic algorithms (GA), which implement a metaheuristic approach using soft computing to ensure the successful propagation of light rays through an optical fiber. 
-                        It was conducted under the supervision of Professor <a href="https://juniv.edu/teachers/imdad" target="_blank" rel="noopener noreferrer">Dr. Md. Imdadul Islam</a>.
-                        <br></br>
-                        <br></br>
-                        <div className='researchInterest'>I am a prospective graduate student and my research interests include Artificial Intelligence (AI), Machine Learning (ML), Graph Neural Networks (GNN), Robotics, and Software Engineering.</div>
-                    </h1>
+
+                    <h3 className="bio-title">
+                        Hello, I’m glad you’re here!!
+                    </h3>
+
+                    <p className="bio-text">
+                        I am a <strong>PhD student in Computer Science</strong> at
+                        <a href="https://cs.utdallas.edu" target="_blank" rel="noopener noreferrer">
+                            {' '}The University of Texas at Dallas
+                        </a>, where I began my doctoral studies in <strong>Spring 2026</strong>.
+                        I am currently serving as a <strong>Teaching Assistant</strong>.
+                    </p>
+
+                    <p className="bio-text">
+                        Prior to my doctoral studies, I worked as a <strong>Software Quality Assurance (SQA) Engineer</strong> at
+                        <a href="https://www.dsinnovators.com" target="_blank" rel="noopener noreferrer">
+                            {' '}Dynamic Solution Innovators Ltd.
+                        </a>.
+                        I was part of the <strong>DPE team</strong>, contributing to the development of the
+                        <a href="https://ipemis.dpe.gov.bd/" target="_blank" rel="noopener noreferrer">
+                            {' '}IPEMIS system
+                        </a>,
+                        a nationwide digital platform supporting primary education in Bangladesh.
+                    </p>
+
+                    <p className="bio-text">
+                        I earned my <strong>Bachelor of Science in Computer Science and Engineering</strong> from
+                        <a href="https://juniv.edu/" target="_blank" rel="noopener noreferrer">
+                            {' '}Jahangirnagar University
+                        </a>.
+                        My undergraduate education provided a strong foundation in algorithms, data analysis,
+                        and research-oriented problem solving.
+                    </p>
+
+                    <p className="bio-text">
+                        My undergraduate research focused on solving <strong>transcendental modal equations</strong>
+                        using <strong>Particle Swarm Optimization (PSO)</strong> and
+                        <strong> Genetic Algorithms (GA)</strong>.
+                        This work applied metaheuristic optimization techniques to optical fiber propagation problems
+                        and was conducted under the supervision of
+                        <a href="https://juniv.edu/teachers/imdad" target="_blank" rel="noopener noreferrer">
+                            {' '}Dr. Md. Imdadul Islam
+                        </a>.
+                    </p>
+
+                    <p className="research-interest">
+                        <strong>Research Interests:</strong> Artificial Intelligence, Machine Learning,
+                        Cybersecurity, and Robotics.
+                    </p>
 
                     <div className="button-container">
-                        <Link to="/projects" className="btn">My Projects</Link>
-                        <Link to="/researches" className="btn">My Research Works</Link>
+                        <Link to="/projects" className="btn">Projects</Link>
+                        <Link to="/researches" className="btn">Research</Link>
                     </div>
+
                 </div>
             </div>
         </div>
