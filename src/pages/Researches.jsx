@@ -6,15 +6,17 @@ const Researches = () => {
 
     const researchPapers = [
         {
-            title: "Evaluation of Propagation Modes of Planar Optical Waveguide using Computational Intelligence",
-            authors: "Jannatul Ferdoush Jannati, Sayeda Parvin",
-            supervisedBy: "Dr. Md. Imdadul Islam",
+            title: "Computational Intelligence-Based Evaluation of Propagation Modes in Planar Optical Waveguide using PSO and GA",
+            authors: "Jannatul Ferdoush Jannati, Sayeda Parvin, Md. Imdadul Islam",
             supervisorUrl: "https://www.juniv.edu/teachers/imdad",
             area: "Computational Intelligence, Optical Fiber, Genetic Algorithm, Particle Swarm Optimization",
-            date: "Jan 2023 -- May 2024",
-            status: "Not Published Yet",
-            abstract: "The solution of the modal equation of a planar optical waveguide is a cumbersome job and usually incident angle of successful modes is determined by a graphical solution. In this research work, we applied two computational intelligence methods: Particle Swarm Optimization (PSO) and Genetic algorithm (GA) in a segment-wise approach to solving the modal equation of the tangent function. The motivation for employing Computational Intelligence (CI) lies in its ability to optimize functions without requiring high-level mathematics or complex statistical models, as opposed to traditional analytical methods. This strategic use of CI significantly reduces the overall computational cost, providing an efficient alternative. Particularly for functions with complex solutions, the utilization of CI or soft computing methods becomes imperative to obtain an approximate solution. Finally, the outcomes derived from both methods (PSO and GA) are meticulously compared with the results obtained through the traditional graphical solution. Notably, the findings reveal a close correlation between the computational intelligence approaches and the graphical method offering a promising avenue for advancing the field with a more computationally feasible approach.",
-            pdfUrl: "https://drive.google.com/file/d/1WL2EM3N4rOqaXmVLx9OHvAZ0Aehn4oh1/view",
+            journal: "International Journal of Wireless and Microwave Technologies (IJWMT)",
+            volume: "Vol. 16, No. 2, pp. 118–138",
+            doi: "https://doi.org/10.5815/ijwmt.2026.02.09",
+            date: "Published: April 8, 2026",
+            status: "Published",
+            abstract: "The solution of the modal equation of a planar optical waveguide is a cumbersome job and usually incident angle of successful modes is determined by a graphical solution. In this research work, we applied two computational intelligence methods: Particle Swarm Optimization (PSO) and Genetic algorithm (GA) in a segment-wise approach to solving the modal equation of the tangent function. The motivation for employing Computational Intelligence (CI) lies in its ability to optimize functions without requiring high-level mathematics or complex statistical models, as opposed to traditional analytical methods. This strategic use of CI significantly reduces the overall computational cost, providing an efficient alternative. Particularly for functions with complex solutions, the utilization of CI or soft computing methods becomes imperative to obtain an approximate solution. Finally, the outcomes derived from both methods (PSO and GA) are meticulously compared with the results obtained through the traditional graphical solution. Notably, the findings reveal a close correlation between the computational intelligence approaches and the graphical method — PSO achieving 99.95% accuracy and GA achieving 99.87% accuracy — offering a promising avenue for advancing the field with a more computationally feasible approach.",
+            pdfUrl: "https://www.mecs-press.org/ijwmt/ijwmt-v16-n2/v16n2-9.html",
         },
         {
             title: "A Comparative Analysis of Machine Learning in Stroke Prediction",
@@ -65,6 +67,15 @@ const Researches = () => {
                                         </p>
                                     )}
                                     <p><strong>Research Area:</strong> {paper.area}</p>
+                                    {paper.journal && (
+                                        <p><strong>Journal:</strong> {paper.journal}</p>
+                                    )}
+                                    {paper.volume && (
+                                        <p><strong>Volume:</strong> {paper.volume}</p>
+                                    )}
+                                    {paper.doi && (
+                                        <p><strong>DOI:</strong> <a href={paper.doi} target="_blank" rel="noopener noreferrer">{paper.doi}</a></p>
+                                    )}
                                     <p><strong>Date:</strong> {paper.date}</p>
                                     <p
                                         className={`status ${paper.status.replace(/\s+/g, '-').toLowerCase()}`}
@@ -84,9 +95,11 @@ const Researches = () => {
                                         </a>
                                     )}
                                 </div>
-                                <div className="research-actions">
-                                    <a href={paper.pdfUrl} target="_blank" rel="noopener noreferrer" className="btn">Read More</a>
-                                </div>
+                                {paper.pdfUrl && !paper.doi && (
+                                    <div className="research-actions">
+                                        <a href={paper.pdfUrl} target="_blank" rel="noopener noreferrer" className="btn">Read More</a>
+                                    </div>
+                                )}
                             </div>
                         </div>
                     ))}
