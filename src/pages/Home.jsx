@@ -24,10 +24,10 @@ const Home = () => {
                         <a href="https://www.linkedin.com/in/jannat349/" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faLinkedin} />
                         </a>
-                        <a href="https://github.com/jannat-349" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://github.com/jannat-349`" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faGithub} />
                         </a>
-                        <a href="https://scholar.google.com/citations?user=G_z0QKQAAAAJ&hl=en" target="_blank" rel="noopener noreferrer" className="social-icon">
+                        <a href="https://scholar.google.com/citations?user=GbZ2fZgAAAAJ&hl=en&authuser=1" target="_blank" rel="noopener noreferrer" className="social-icon">
                             <FontAwesomeIcon icon={faGoogle} />
                         </a>
                         <a href="https://orcid.org/0009-0002-0053-884X" target="_blank" rel="noopener noreferrer" className="social-icon">
