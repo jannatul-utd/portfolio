@@ -62,7 +62,11 @@ const Home = () => {
                         <a href="https://cs.utdallas.edu" target="_blank" rel="noopener noreferrer">
                             {' '}The University of Texas at Dallas
                         </a>, where I began my doctoral studies in <strong>Spring 2026</strong>.
-                        I am currently serving as a <strong>Teaching Assistant</strong>.
+                        I am currently working under the supervision of{' '}
+                        <a href="https://scholar.google.com/citations?hl=en&user=8Qt10f4AAAAJ" target="_blank" rel="noopener noreferrer">
+                            Dr. Latifur Khan
+                        </a>{' '}
+                        and serving as a <strong>Teaching Assistant</strong>.
                     </p>
 
                     <p className="bio-text">
@@ -98,8 +102,7 @@ const Home = () => {
                     </p>
 
                     <p className="research-interest">
-                        <strong>Research Interests:</strong> Artificial Intelligence, Machine Learning,
-                        Cybersecurity, and Robotics.
+                        <strong>Research Interests:</strong> Quantum Computing and Cybersecurity.
                     </p>
 
                     <div className="button-container">

@@ -1,115 +1,116 @@
 .header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 20px 50px;
-    background-color: rgba(0, 0, 0);
-    color: white;
-    position: fixed;
-    z-index: 1000;
-    right: 0;
-    left: 0;
-    transition: background-color 0.3s, opacity 0.3s;
-    opacity: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 48px;
+  height: var(--header-height);
+  background-color: var(--color-header);
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  transition: box-shadow var(--transition), background-color var(--transition);
+}
+
+.header.scrolled {
+  box-shadow: 0 2px 16px rgba(0, 0, 0, 0.25);
+  background-color: rgba(15, 23, 42, 0.97);
+  backdrop-filter: blur(8px);
 }
 
 .logo-container {
-    display: flex;
-    align-items: center;
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
 }
 
 .fancy-name {
-    font-family: 'Dancing Script', cursive;
-    font-size: 3rem;
-    color: white;
-    font-style: italic;
-    letter-spacing: 2px;
-    cursor: pointer;
-    transition: color 0.3s;
+  font-family: var(--font-display);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: #ffffff;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: color var(--transition);
 }
 
 .fancy-name:hover {
-    color: #879faf;
-    text-decoration: none;
+  color: #93c5fd;
+  text-decoration: none;
 }
 
 .nav-menu {
-    display: flex;
-    align-items: center;
-    gap: 30px;
-    margin-left: auto;
+  display: flex;
+  align-items: center;
+  gap: 8px;
 }
 
 .nav-link {
-    font-family: 'Dancing Script', cursive;
-    font-size: 1.5rem;
-    color: white;
-    text-decoration: none;
-    display: flex;
-    align-items: center;
-    transition: color 0.3s;
+  font-family: var(--font-sans);
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #cbd5e1;
+  text-decoration: none;
+  padding: 6px 14px;
+  border-radius: var(--radius-sm);
+  transition: color var(--transition), background-color var(--transition);
+  letter-spacing: 0.02em;
 }
 
 .nav-link:hover {
-    color: #879faf;
-    text-decoration: none;
+  color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.1);
+  text-decoration: none;
 }
 
 .hamburger-menu {
-    display: none !important;
-    color: white;
-    font-size: 3rem;
-
+  display: none !important;
+  color: #ffffff !important;
 }
 
-@media (max-width: 1024px) {
-    .nav-menu {
-        display: none;
-        flex-direction: column;
-        align-items: flex-start;
-        position: absolute;
-        top: 70px;
-        right: 20px;
-        background: rgba(65, 60, 88, 0.9);
-        border-radius: 8px;
-        padding: 20px;
-        width: 200px;
-        gap: 10px;
-    }
-    .fancy-name {
-        font-size: 2rem;
-    }
+@media (max-width: 900px) {
+  .header {
+    padding: 0 24px;
+  }
 
-    .nav-menu.active {
-        display: flex;
-    }
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    align-items: stretch;
+    position: absolute;
+    top: var(--header-height);
+    right: 16px;
+    background: var(--color-header);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-md);
+    padding: 12px;
+    width: 200px;
+    gap: 4px;
+    box-shadow: var(--shadow-lg);
+  }
 
-    .hamburger-menu {
-        display: flex !important;
-        font-size: 3rem;
-    }
+  .nav-menu.active {
+    display: flex;
+  }
+
+  .nav-link {
+    padding: 10px 16px;
+    font-size: 0.95rem;
+  }
+
+  .hamburger-menu {
+    display: flex !important;
+  }
+
+  .fancy-name {
+    font-size: 1.5rem;
+  }
 }
 
 @media (max-width: 480px) {
-    .logo-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .logo {
-        width: 50px;
-        height: 50px;
-    }
-
-    .nav-link {
-        font-size: 1.5rem;
-    }
-
-    .fancy-name {
-        font-size: 1.5rem;
-    }
-    .hamburger-menu {
-        font-size: 2rem;
-    }
+  .fancy-name {
+    font-size: 1.3rem;
+  }
 }

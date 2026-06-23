@@ -77,11 +77,8 @@ const Researches = () => {
                                         <p><strong>DOI:</strong> <a href={paper.doi} target="_blank" rel="noopener noreferrer">{paper.doi}</a></p>
                                     )}
                                     <p><strong>Date:</strong> {paper.date}</p>
-                                    <p
-                                        className={`status ${paper.status.replace(/\s+/g, '-').toLowerCase()}`}
-                                        style={{ color: paper.status === "Published" ? "green" : paper.status === "Under Review" ? "orange" : "red" }}
-                                    >
-                                        <strong>Status:</strong> {paper.status}
+                                    <p className={`status ${paper.status.replace(/\s+/g, '-').toLowerCase()}`}>
+                                        {paper.status}
                                     </p>
                                     <div className={`research-abstract ${expandedIndex === index ? 'expand' : ''}`}>
                                         <p><strong>Abstract:</strong> {paper.abstract}</p>

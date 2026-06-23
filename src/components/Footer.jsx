@@ -1,27 +1,32 @@
 import React from 'react';
-import '../styles/Footer.css'; // Ensure this CSS file is created
+import '../styles/Footer.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedin, faGithub, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons';
 
 const Footer = () => {
     return (
         <footer className="footer">
             <div className="social-links">
-                <a href="https://www.linkedin.com/in/jannat349/" target="_blank" rel="noopener noreferrer" className="linkedin">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/linkedin.png" alt="LinkedIn" className="social-icon linkedin-icon" />
+                <a href="https://www.linkedin.com/in/jannat349/" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="LinkedIn">
+                    <FontAwesomeIcon icon={faLinkedin} />
                 </a>
-                <a href="https://github.com/jannat-349" target="_blank" rel="noopener noreferrer" className="github">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/github.png" alt="GitHub" className="social-icon github-icon" />
+                <a href="https://github.com/jannat-349" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="GitHub">
+                    <FontAwesomeIcon icon={faGithub} />
                 </a>
-                <a href="https://www.facebook.com/jannatul.ferdoush.1217" target="_blank" rel="noopener noreferrer" className="facebook">
-                    <img src="https://img.icons8.com/ios-filled/50/000000/facebook.png" alt="Facebook" className="social-icon facebook-icon" />
+                <a href="https://www.facebook.com/jannatul.ferdoush.1217" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="Facebook">
+                    <FontAwesomeIcon icon={faFacebook} />
+                </a>
+                <a href="https://www.instagram.com/00_magical_witch" target="_blank" rel="noopener noreferrer" className="footer-social-icon" aria-label="Instagram">
+                    <FontAwesomeIcon icon={faInstagram} />
                 </a>
             </div>
             <div className="copyright">
-                <p>&copy; 2024 Jannatul. All rights reserved.</p>
+                <p>&copy; 2026 Jannatul Ferdoush Jannati. All rights reserved.</p>
             </div>
             <div className="contact-info">
                 <p>
-                    <a href="tel:+8801795794850" className="contact-link">
-                        <i className="fas fa-phone contact-icon phone-icon"></i> Phone: +8801795794850
+                    <a href="tel:+19453832463" className="contact-link">
+                        <i className="fas fa-phone contact-icon phone-icon"></i> Phone: +1 (945) 383-2463
                     </a>
                 </p>
                 <p>
@@ -30,8 +35,8 @@ const Footer = () => {
                     </a>
                 </p>
                 <p>
-                    <a href="https://www.google.com/maps/search/?api=1&query=Dhaka%2C%20Bangladesh" target="_blank" rel="noopener noreferrer" className="contact-link">
-                        <i className="fas fa-map-marker-alt contact-icon address-icon"></i> Address: Dhaka, Bangladesh
+                    <a href="https://www.google.com/maps/search/?api=1&query=Texas%2C%20United+States" target="_blank" rel="noopener noreferrer" className="contact-link">
+                        <i className="fas fa-map-marker-alt contact-icon address-icon"></i> Address: Texas, United States
                     </a>
                 </p>
             </div>
